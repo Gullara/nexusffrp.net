@@ -247,6 +247,23 @@ function hide_elements(cat) {
 				<input type="text" name="bscftrscls_pypl_url" id="bscftrscls_pypl_url" value="{{ BSCFTRSCLS_PYPL_URL }}" placeholder="{{ lang('ACP_BSCFTRSCLS_PYPL_URL_PLCHLDR') }}" size="52%" />
 			</dd>
 		</dl>
+		<dl>
+			<dt>
+				<label for="bscftrscls_dscrd_enbl">{{ lang('ACP_BSCFTRSCLS_DSCRD_ENBL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_dscrd_enbl" value="1" {% if BSCFTRSCLS_DSCRD_ENBL %} id="bscftrscls_dscrd_enbl" checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_dscrd_enbl" value="0" {% if not BSCFTRSCLS_DSCRD_ENBL %} id="bscftrscls_dscrd_enbl" checked="checked"{% endif %}/> {{ lang('NO') }}
+			</dd>
+		</dl>
+		<dl class="extra-space-below">
+			<dt>
+				<label for="bscftrscls_dscrd_url">{{ lang('ACP_BSCFTRSCLS_DSCRD_URL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" name="bscftrscls_dscrd_url" id="bscftrscls_dscrd_url" value="{{ BSCFTRSCLS_DSCRD_URL }}" placeholder="{{ lang('ACP_BSCFTRSCLS_DSCRD_URL_PLCHLDR') }}" size="52%" />
+			</dd>
+		</dl>
 		</div>
 	</fieldset>
 

@@ -69,6 +69,9 @@ var $u_action;
 		$config->set('bscftrscls_pypl_enbl',		$request->variable('bscftrscls_pypl_enbl', 0));
 		$config->set('bscftrscls_pypl_url',			$request->variable('bscftrscls_pypl_url', ''));
 
+		$config->set('bscftrscls_dscrd_enbl',		$request->variable('bscftrscls_dscrd_enbl', 0));
+		$config->set('bscftrscls_dscrd_url',		$request->variable('bscftrscls_dscrd_url', ''));
+
 		trigger_error($user->lang('ACP_BSCFTRSCLS_SAVED') . adm_back_link($this->u_action));
 		}
 
@@ -111,6 +114,9 @@ var $u_action;
 
 			'BSCFTRSCLS_PYPL_ENBL'		=> $config['bscftrscls_pypl_enbl'],
 			'BSCFTRSCLS_PYPL_URL'		=> $config['bscftrscls_pypl_url'],
+
+			'BSCFTRSCLS_DSCRD_ENBL'		=> $config['bscftrscls_dscrd_enbl'],
+			'BSCFTRSCLS_DSCRD_URL'		=> $config['bscftrscls_dscrd_url'],
 
 			'U_ACTION'					=> $this->u_action,
 		));

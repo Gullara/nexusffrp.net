@@ -28,4 +28,5 @@ $lang = array_merge($lang, array(
 	'BSCFTRSCLS_GTHUB'		=> 'GitHub',
 	'BSCFTRSCLS_EBAY'		=> 'eBay',
 	'BSCFTRSCLS_PYPL'		=> 'PayPal',
+	'BSCFTRSCLS_DSCRD'		=> 'Discord',
 ));

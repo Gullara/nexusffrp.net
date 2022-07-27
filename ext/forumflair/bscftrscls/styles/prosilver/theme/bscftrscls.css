@@ -46,6 +46,16 @@
 .bscftrscls-github { background-color: #444444; }
 .bscftrscls-ebay { background-color: #B39212; }
 .bscftrscls-paypal { background-color: #27346A; }
+.bscftrscls-discord { background-color: #5865F2; }
+
+.bscftrscls-discord .icon {
+	background-image: url("discord_white.svg");
+	background-repeat: no-repeat;
+	background-position: center; 
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+}
 
 /* Social Icon Hover States */
 .bscftrscls-social:focus .icon, .bscftrscls-social:hover .icon { color: #FFFFFF; transform: rotateZ(360deg); transition: transform 0.4s ease-out; }

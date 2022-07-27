@@ -84,6 +84,9 @@ class main_listener implements EventSubscriberInterface
 
 		'BSCFTRSCLS_PYPL_ENBL'		=> $this->config['bscftrscls_pypl_enbl'],
 		'BSCFTRSCLS_PYPL_URL'		=> $this->config['bscftrscls_pypl_url'],
+
+		'BSCFTRSCLS_DSCRD_ENBL'		=> $this->config['bscftrscls_dscrd_enbl'],
+		'BSCFTRSCLS_DSCRD_URL'		=> $this->config['bscftrscls_dscrd_url'],
 		));
 	}
 

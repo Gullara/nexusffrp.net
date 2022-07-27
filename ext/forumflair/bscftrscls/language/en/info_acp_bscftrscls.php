@@ -81,5 +81,9 @@ $lang = array_merge($lang, array(
 	'ACP_BSCFTRSCLS_PYPL_URL'				=> 'PayPal URL',
 	'ACP_BSCFTRSCLS_PYPL_URL_PLCHLDR'		=> 'https://www.paypal.com/paypalme/your-username-here/',
 
+	'ACP_BSCFTRSCLS_DSCRD_ENBL'				=> 'Enable Discord social',
+	'ACP_BSCFTRSCLS_DSCRD_URL'				=> 'Discord URL',
+	'ACP_BSCFTRSCLS_DSCRD_URL_PLCHLDR'		=> 'https://discord.gg/invite-id-here/',
+
 	'ACP_BSCFTRSCLS_SAVED'					=> 'Extension settings updated successfully.',
 ));

@@ -58,6 +58,9 @@ class bscftrscls_data extends \phpbb\db\migration\migration
 
 			array('config.add',		array('bscftrscls_pypl_enbl', '')),
 			array('config.add',		array('bscftrscls_pypl_url', '')),
+
+			array('config.add',		array('bscftrscls_dscrd_enbl', '')),
+			array('config.add',		array('bscftrscls_dscrd_url', '')),
 		);
 	}
 }
