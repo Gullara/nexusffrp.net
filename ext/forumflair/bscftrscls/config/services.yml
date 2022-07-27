@@ -1,0 +1,9 @@
+services:
+    forumflair.bscftrscls.listener:
+        class: forumflair\bscftrscls\event\main_listener
+        arguments:
+            - '@user'
+            - '@template'
+            - '@config'
+        tags:
+            - { name: event.listener }

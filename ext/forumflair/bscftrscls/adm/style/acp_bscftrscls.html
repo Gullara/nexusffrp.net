@@ -1,0 +1,265 @@
+{% INCLUDE 'overall_header.html' %}
+{% INCLUDECSS '@forumflair_bscftrscls/css/bscftrscls_acp.css' %}
+
+<h1>{{ lang('ACP_BSCFTRSCLS_SETTINGS') }}</h1>
+<p>{{ lang('ACP_BSCFTRSCLS_SETTINGS_INFO') }}</p>
+
+<script>
+function show_elements(cat) {
+	var cat = cat; if (cat === 'collapsible-1')	{ $('#collapsible-1').show(); };
+}
+
+function hide_elements(cat) {
+	var cat = cat; if (cat === 'collapsible-1')	{ $('#collapsible-1').hide(); };
+}
+</script>
+
+<form id="acp_bscftrscls" method="post" action="{{ U_ACTION }}">
+
+	<fieldset>
+		<legend><i class="icon fa-toggle-on fa-fw"></i>{{ lang('ACP_BSCFTRSCLS_ENBL_SETUP') }}</legend>
+		<dl>
+			<dt>
+				<label for="bscftrscls_enbl">{{ lang('ACP_BSCFTRSCLS_ENBL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_enbl" value="1" {% if BSCFTRSCLS_ENBL %} id="bscftrscls_enbl" checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_enbl" value="0" {% if not BSCFTRSCLS_ENBL %} id="bscftrscls_enbl" checked="checked"{% endif %}/> {{ lang('NO') }}
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend><i class="icon fa-cog fa-fw"></i>{{ lang('ACP_BSCFTRSCLS_SCLS_STYLE_SETUP') }}</legend>
+		<dl>
+			<dt>
+				<label for="bscftrscls_sze">{{ lang('ACP_BSCFTRSCLS_SCLS_SZE') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_sze" value="0" {% if BSCFTRSCLS_SZE == 0 %} id="bscftrscls_sze" checked="checked"{% endif %}/> {{ lang('ACP_BSCFTRSCLS_SCLS_SML') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_sze" value="1" {% if BSCFTRSCLS_SZE == 1 %} id="bscftrscls_sze" checked="checked"{% endif %}/> {{ lang('ACP_BSCFTRSCLS_SCLS_MDM') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_sze" value="2" {% if BSCFTRSCLS_SZE == 2 %} id="bscftrscls_sze" checked="checked"{% endif %}/> {{ lang('ACP_BSCFTRSCLS_SCLS_LRG') }}
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="bscftrscls_crnrs">{{ lang('ACP_BSCFTRSCLS_SCLS_CRNRS') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_crnrs" value="0" {% if BSCFTRSCLS_CRNRS == 0 %} id="bscftrscls_crnrs" checked="checked"{% endif %}/> {{ lang('ACP_BSCFTRSCLS_SCLS_FLT') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_crnrs" value="1" {% if BSCFTRSCLS_CRNRS == 1 %} id="bscftrscls_crnrs" checked="checked"{% endif %}/> {{ lang('ACP_BSCFTRSCLS_SCLS_RNDD') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_crnrs" value="2" {% if BSCFTRSCLS_CRNRS == 2 %} id="bscftrscls_crnrs" checked="checked"{% endif %}/> {{ lang('ACP_BSCFTRSCLS_SCLS_RND') }}
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend><i class="icon fa-cog fa-fw"></i>{{ lang('ACP_BSCFTRSCLS_SCLS_LINKS_SETUP') }}</legend>
+		<div class="collapse-buttons">
+			<a href="#" onclick="show_elements('collapsible-1');"><i class="icon fa-plus-circle fa-fw"></i></a>
+			<a href="#" onclick="hide_elements('collapsible-1');"><i class="icon fa-minus-circle fa-fw"></i></a>
+		</div>
+		<div id="collapsible-1">
+		<dl>
+			<dt>
+				<label for="bscftrscls_wbst_enbl">{{ lang('ACP_BSCFTRSCLS_WBST_ENBL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_wbst_enbl" value="1" {% if BSCFTRSCLS_WBST_ENBL %} id="bscftrscls_wbst_enbl" checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_wbst_enbl" value="0" {% if not BSCFTRSCLS_WBST_ENBL %} id="bscftrscls_wbst_enbl" checked="checked"{% endif %}/> {{ lang('NO') }}
+			</dd>
+		</dl>
+		<dl class="extra-space-below">
+			<dt>
+				<label for="bscftrscls_wbst_url">{{ lang('ACP_BSCFTRSCLS_WBST_URL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" name="bscftrscls_wbst_url" id="bscftrscls_wbst_url" value="{{ BSCFTRSCLS_WBST_URL }}" placeholder="{{ lang('ACP_BSCFTRSCLS_WBST_URL_PLCHLDR') }}" size="52%" />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="bscftrscls_fcbk_enbl">{{ lang('ACP_BSCFTRSCLS_FCBK_ENBL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_fcbk_enbl" value="1" {% if BSCFTRSCLS_FCBK_ENBL %} id="bscftrscls_fcbk_enbl" checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_fcbk_enbl" value="0" {% if not BSCFTRSCLS_FCBK_ENBL %} id="bscftrscls_fcbk_enbl" checked="checked"{% endif %}/> {{ lang('NO') }}
+			</dd>
+		</dl>
+		<dl class="extra-space-below">
+			<dt>
+				<label for="bscftrscls_fcbk_url">{{ lang('ACP_BSCFTRSCLS_FCBK_URL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" name="bscftrscls_fcbk_url" id="bscftrscls_fcbk_url" value="{{ BSCFTRSCLS_FCBK_URL }}" placeholder="{{ lang('ACP_BSCFTRSCLS_FCBK_URL_PLCHLDR') }}" size="52%" />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="bscftrscls_twtr_enbl">{{ lang('ACP_BSCFTRSCLS_TWTR_ENBL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_twtr_enbl" value="1" {% if BSCFTRSCLS_TWTR_ENBL %} id="bscftrscls_twtr_enbl" checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_twtr_enbl" value="0" {% if not BSCFTRSCLS_TWTR_ENBL %} id="bscftrscls_twtr_enbl" checked="checked"{% endif %}/> {{ lang('NO') }}
+			</dd>
+		</dl>
+		<dl class="extra-space-below">
+			<dt>
+				<label for="bscftrscls_twtr_url">{{ lang('ACP_BSCFTRSCLS_TWTR_URL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" name="bscftrscls_twtr_url" id="bscftrscls_twtr_url" value="{{ BSCFTRSCLS_TWTR_URL }}" placeholder="{{ lang('ACP_BSCFTRSCLS_TWTR_URL_PLCHLDR') }}" size="52%" />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="bscftrscls_insta_enbl">{{ lang('ACP_BSCFTRSCLS_INSTA_ENBL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_insta_enbl" value="1" {% if BSCFTRSCLS_INSTA_ENBL %} id="bscftrscls_insta_enbl" checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_insta_enbl" value="0" {% if not BSCFTRSCLS_INSTA_ENBL %} id="bscftrscls_insta_enbl" checked="checked"{% endif %}/> {{ lang('NO') }}
+			</dd>
+		</dl>
+		<dl class="extra-space-below">
+			<dt>
+				<label for="bscftrscls_insta_url">{{ lang('ACP_BSCFTRSCLS_INSTA_URL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" name="bscftrscls_insta_url" id="bscftrscls_insta_url" value="{{ BSCFTRSCLS_INSTA_URL }}" placeholder="{{ lang('ACP_BSCFTRSCLS_INSTA_URL_PLCHLDR') }}" size="52%" />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="bscftrscls_pntrst_enbl">{{ lang('ACP_BSCFTRSCLS_PNTRST_ENBL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_pntrst_enbl" value="1" {% if BSCFTRSCLS_PNTRST_ENBL %} id="bscftrscls_pntrst_enbl" checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_pntrst_enbl" value="0" {% if not BSCFTRSCLS_PNTRST_ENBL %} id="bscftrscls_pntrst_enbl" checked="checked"{% endif %}/> {{ lang('NO') }}
+			</dd>
+		</dl>
+		<dl class="extra-space-below">
+			<dt>
+				<label for="bscftrscls_pntrst_url">{{ lang('ACP_BSCFTRSCLS_PNTRST_URL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" name="bscftrscls_pntrst_url" id="bscftrscls_pntrst_url" value="{{ BSCFTRSCLS_PNTRST_URL }}" placeholder="{{ lang('ACP_BSCFTRSCLS_PNTRST_URL_PLCHLDR') }}" size="52%" />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="bscftrscls_ytube_enbl">{{ lang('ACP_BSCFTRSCLS_YTUBE_ENBL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_ytube_enbl" value="1" {% if BSCFTRSCLS_YTUBE_ENBL %} id="bscftrscls_ytube_enbl" checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_ytube_enbl" value="0" {% if not BSCFTRSCLS_YTUBE_ENBL %} id="bscftrscls_ytube_enbl" checked="checked"{% endif %}/> {{ lang('NO') }}
+			</dd>
+		</dl>
+		<dl class="extra-space-below">
+			<dt>
+				<label for="bscftrscls_ytube_url">{{ lang('ACP_BSCFTRSCLS_YTUBE_URL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" name="bscftrscls_ytube_url" id="bscftrscls_ytube_url" value="{{ BSCFTRSCLS_YTUBE_URL }}" placeholder="{{ lang('ACP_BSCFTRSCLS_YTUBE_URL_PLCHLDR') }}" size="52%" />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="bscftrscls_drbl_enbl">{{ lang('ACP_BSCFTRSCLS_DRBL_ENBL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_drbl_enbl" value="1" {% if BSCFTRSCLS_DRBL_ENBL %} id="bscftrscls_drbl_enbl" checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_drbl_enbl" value="0" {% if not BSCFTRSCLS_DRBL_ENBL %} id="bscftrscls_drbl_enbl" checked="checked"{% endif %}/> {{ lang('NO') }}
+			</dd>
+		</dl>
+		<dl class="extra-space-below">
+			<dt>
+				<label for="bscftrscls_drbl_url">{{ lang('ACP_BSCFTRSCLS_DRBL_URL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" name="bscftrscls_drbl_url" id="bscftrscls_drbl_url" value="{{ BSCFTRSCLS_DRBL_URL }}" placeholder="{{ lang('ACP_BSCFTRSCLS_DRBL_URL_PLCHLDR') }}" size="52%" />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="bscftrscls_cdpen_enbl">{{ lang('ACP_BSCFTRSCLS_CDPEN_ENBL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_cdpen_enbl" value="1" {% if BSCFTRSCLS_CDPEN_ENBL %} id="bscftrscls_cdpen_enbl" checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_cdpen_enbl" value="0" {% if not BSCFTRSCLS_CDPEN_ENBL %} id="bscftrscls_cdpen_enbl" checked="checked"{% endif %}/> {{ lang('NO') }}
+			</dd>
+		</dl>
+		<dl class="extra-space-below">
+			<dt>
+				<label for="bscftrscls_cdpen_url">{{ lang('ACP_BSCFTRSCLS_CDPEN_URL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" name="bscftrscls_cdpen_url" id="bscftrscls_cdpen_url" value="{{ BSCFTRSCLS_CDPEN_URL }}" placeholder="{{ lang('ACP_BSCFTRSCLS_CDPEN_URL_PLCHLDR') }}" size="52%" />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="bscftrscls_gthub_enbl">{{ lang('ACP_BSCFTRSCLS_GTHUB_ENBL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_gthub_enbl" value="1" {% if BSCFTRSCLS_GTHUB_ENBL %} id="bscftrscls_gthub_enbl" checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_gthub_enbl" value="0" {% if not BSCFTRSCLS_GTHUB_ENBL %} id="bscftrscls_gthub_enbl" checked="checked"{% endif %}/> {{ lang('NO') }}
+			</dd>
+		</dl>
+		<dl class="extra-space-below">
+			<dt>
+				<label for="bscftrscls_gthub_url">{{ lang('ACP_BSCFTRSCLS_GTHUB_URL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" name="bscftrscls_gthub_url" id="bscftrscls_gthub_url" value="{{ BSCFTRSCLS_GTHUB_URL }}" placeholder="{{ lang('ACP_BSCFTRSCLS_GTHUB_URL_PLCHLDR') }}" size="52%" />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="bscftrscls_ebay_enbl">{{ lang('ACP_BSCFTRSCLS_EBAY_ENBL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_ebay_enbl" value="1" {% if BSCFTRSCLS_EBAY_ENBL %} id="bscftrscls_ebay_enbl" checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_ebay_enbl" value="0" {% if not BSCFTRSCLS_EBAY_ENBL %} id="bscftrscls_ebay_enbl" checked="checked"{% endif %}/> {{ lang('NO') }}
+			</dd>
+		</dl>
+		<dl class="extra-space-below">
+			<dt>
+				<label for="bscftrscls_ebay_url">{{ lang('ACP_BSCFTRSCLS_EBAY_URL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" name="bscftrscls_ebay_url" id="bscftrscls_ebay_url" value="{{ BSCFTRSCLS_EBAY_URL }}" placeholder="{{ lang('ACP_BSCFTRSCLS_EBAY_URL_PLCHLDR') }}" size="52%" />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				<label for="bscftrscls_pypl_enbl">{{ lang('ACP_BSCFTRSCLS_PYPL_ENBL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="radio" class="radio" name="bscftrscls_pypl_enbl" value="1" {% if BSCFTRSCLS_PYPL_ENBL %} id="bscftrscls_pypl_enbl" checked="checked"{% endif %}/> {{ lang('YES') }} &nbsp;
+				<input type="radio" class="radio" name="bscftrscls_pypl_enbl" value="0" {% if not BSCFTRSCLS_PYPL_ENBL %} id="bscftrscls_pypl_enbl" checked="checked"{% endif %}/> {{ lang('NO') }}
+			</dd>
+		</dl>
+		<dl class="extra-space-below">
+			<dt>
+				<label for="bscftrscls_pypl_url">{{ lang('ACP_BSCFTRSCLS_PYPL_URL') }}{{ lang('COLON') }}</label>
+			</dt>
+			<dd>
+				<input type="text" name="bscftrscls_pypl_url" id="bscftrscls_pypl_url" value="{{ BSCFTRSCLS_PYPL_URL }}" placeholder="{{ lang('ACP_BSCFTRSCLS_PYPL_URL_PLCHLDR') }}" size="52%" />
+			</dd>
+		</dl>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend><i class="icon fa-check-circle fa-fw"></i>{{ lang('ACP_SUBMIT_CHANGES') }}</legend>
+		<p class="submit-buttons">
+			<input type="hidden" name="action" value="save" />
+			<button class="button submit-button" type="submit" value="{{ lang('SUBMIT') }}" name="submit"><i class="icon fa-check fa-fw" aria-hidden="true"></i><span>{{ lang('SUBMIT') }}</span></button>
+			<button class="button reset-button" type="reset" value="{{ lang('RESET') }}" name="reset"><i class="icon fa-undo fa-fw" aria-hidden="true"></i><span>{{ lang('RESET') }}</span></button>
+			{{ S_FORM_TOKEN }}
+		</p>
+	</fieldset>
+
+</form>
+
+{% INCLUDE 'overall_footer.html' %}

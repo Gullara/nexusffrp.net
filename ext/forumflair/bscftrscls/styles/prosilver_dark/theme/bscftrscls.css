@@ -1,0 +1,64 @@
+/*	phpBB3 Style Sheet
+	--------------------------------------------------------------
+	phpBB Extension Name:	Basic Footer Socials
+	Extension Version:		1.0.0
+	Last Updated:			01/02/2022
+	Extension Developer:	ForumFlair (https://forumflair.co.uk)
+	Compatible Style:		Prosilver_Dark
+	--------------------------------------------------------------
+*/
+
+/* Socials Placement */
+.bscftrscls { margin-bottom: 4px; }
+.bscftrscls ul { display: inline-flex; flex-wrap: wrap; justify-content: center; }
+.bscftrscls li { list-style: none; }
+
+/* Social Icon Corners */
+.bscftrscls-rounded-socials .bscftrscls-social { border-radius: 4px; }
+.bscftrscls-round-socials .bscftrscls-social { border-radius: 50%; }
+
+/* Social Icon Size Small */
+.bscftrscls-small-socials .bscftrscls-social { height: 38px; width: 38px; }
+.bscftrscls-small-socials .icon { font-size: 22px; }
+
+/* Social Icon Size Medium */
+.bscftrscls-medium-socials .bscftrscls-social { height: 44px; width: 44px; }
+.bscftrscls-medium-socials .icon { font-size: 26px; }
+
+/* Social Icon Size Large */
+.bscftrscls-large-socials .bscftrscls-social { height: 50px; width: 50px; }
+.bscftrscls-large-socials .icon { font-size: 28px; }
+
+/* Social Icon Margin & Position */
+.bscftrscls-social { align-items: center; display: inline-flex; justify-content: center; margin: 6px; }
+.bscftrscls-social .icon::before { padding-right: 0; }
+
+/* Social Icon Colours */
+.bscftrscls-social .icon { color: #FFFFFF; }
+.bscftrscls-website	{ background-color: #18992C; }
+.bscftrscls-facebook { background-color: #3B5998; }
+.bscftrscls-twitter	{ background-color: #00ACED; }
+.bscftrscls-instagram { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); background-color: #BB3689; }
+.bscftrscls-pinterest { background-color: #B81621; }
+.bscftrscls-youtube	{ background-color: #DF1C31; }
+.bscftrscls-dribbble { background-color: #D74579; }
+.bscftrscls-codepen	{ background-color: #5D6679; }
+.bscftrscls-github { background-color: #5B5B5B; }
+.bscftrscls-ebay { background-color: #B39212; }
+.bscftrscls-paypal { background-color: #354BA5; }
+
+/* Social Icon Hover States */
+.bscftrscls-social:focus .icon, .bscftrscls-social:hover .icon { color: #FFFFFF; transform: rotateZ(360deg); transition: transform 0.4s ease-out; }
+.bscftrscls-social:focus, .bscftrscls-social:hover { text-decoration: none; }
+.bscftrscls-social .icon { transition: all 400ms; }
+
+/* Responsive Media Queries */
+@media (max-width: 700px) {
+	/* Social Icon Size Large */
+	.bscftrscls-large-socials .bscftrscls-social { height: 44px; width: 44px; }
+	.bscftrscls-large-socials .icon { font-size: 26px; }
+}
+
+/* Prosilver RTL Bug Fix: fixes icon padding mistake found in prosilver bidi.css */
+.rtl .bscftrscls-social .icon { padding: 0; }
+/* This can be removed when the mistake in the prosilver bidi.css file is fixed */

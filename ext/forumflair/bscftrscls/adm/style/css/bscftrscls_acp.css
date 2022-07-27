@@ -1,0 +1,49 @@
+/*	phpBB3 Style Sheet
+	--------------------------------------------------------------
+	phpBB Extension Name:	Basic Footer Socials
+	Extension Version:		1.0.0
+	Last Updated:			01/02/2022
+	Extension Developer:	ForumFlair (https://forumflair.co.uk)
+	Style Sheet Purpose:	ACP Settings Page Styling
+	--------------------------------------------------------------
+*/
+
+#acp_bscftrscls .button { border: 0; border-radius: 50px; color: #FFFFFF; font-family: arial; font-size: 1.2em; font-weight: bold; letter-spacing: 1px; line-height: inherit; padding: 8px 10px; margin: 0 6px; }
+#acp_bscftrscls .button:hover { cursor: pointer; }
+#acp_bscftrscls .button .icon { color: #FFFFFF; font-size: inherit; font-weight: normal; }
+#acp_bscftrscls .button.reset-button { background: #2575E1; }
+#acp_bscftrscls .button.reset-button:focus, #acp_bscftrscls .button.reset-button:hover { background: #3084F7; }
+#acp_bscftrscls .button.submit-button { background: #01A46E; }
+#acp_bscftrscls .button.submit-button:focus, #acp_bscftrscls .button.submit-button:hover { background: #0BBD82; }
+#acp_bscftrscls .button.reset-button span { padding: 0 2px 0 3px; }
+#acp_bscftrscls .button.submit-button span { padding: 0 2px; }
+#acp_bscftrscls .collapse-buttons { float: right; margin-bottom: 4px; }
+#acp_bscftrscls .collapse-buttons a { float: left; text-decoration: none; }
+#acp_bscftrscls .collapse-buttons .icon { font-size: 20px; line-height: 0.7em; padding: 0 6px; }
+#acp_bscftrscls .fa-minus-circle.icon { color: #2575E1; }
+#acp_bscftrscls .fa-minus-circle:hover.icon { color: #3888F4; }
+#acp_bscftrscls .fa-plus-circle.icon { color: #01A46E; }
+#acp_bscftrscls .fa-plus-circle:hover.icon { color: #10C68A; }
+#acp_bscftrscls .submit-buttons { margin-bottom: 4px; margin-top: 0; }
+#acp_bscftrscls dl, #acp_bscftrscls optgroup, #acp_bscftrscls select { font-family: arial; }
+#acp_bscftrscls dl.extra-space-below { margin-bottom: 30px; }
+#acp_bscftrscls dt label { color: #5E5E5E; font-size: 1.2em; }
+#acp_bscftrscls dt span { color: #3460C8; font-size: 1.2em; }
+#acp_bscftrscls fieldset { border-color: #DDDDDD; border-radius: 0; }
+#acp_bscftrscls fieldset dd, #acp_bscftrscls input { font-family: arial; font-size: 1.1em; }
+#acp_bscftrscls fieldset dl { clear: both; }
+#acp_bscftrscls fieldset dl:hover dt label { color: #8E8C8C; }
+#acp_bscftrscls legend { color: #282828; font-family: arial; font-size: 1em; line-height: 1.1em; padding-right: 6px; }
+#acp_bscftrscls legend .icon { color: #737373; float: left; font-size: 20px; line-height: 0.7em; padding: 0 6px; }
+#collapsible-1 { display: none; }
+
+.rtl #acp_bscftrscls .collapse-buttons { float: left; }
+.rtl #acp_bscftrscls .collapse-buttons a { float: right; }
+.rtl #acp_bscftrscls .icon { float: right; }
+
+/* Responsive Media Queries */
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+	#acp_bscftrscls .collapse-buttons { margin-bottom: 6px; }
+	#acp_bscftrscls fieldset { margin-bottom: 20px; }
+	#acp_bscftrscls fieldset dt { padding-bottom: 5px; }
+}

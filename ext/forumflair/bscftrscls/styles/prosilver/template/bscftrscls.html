@@ -1,0 +1,83 @@
+<div class="bscftrscls bscftrscls-{% if BSCFTRSCLS_CRNRS == 1 %}rounded{% endif %}{% if BSCFTRSCLS_CRNRS == 2 %}round{% endif %}-socials">
+	<div class="inner">
+	<ul class="bscftrscls-{% if BSCFTRSCLS_SZE == 0 %}small{% endif %}{% if BSCFTRSCLS_SZE == 1 %}medium{% endif %}{% if BSCFTRSCLS_SZE == 2 %}large{% endif %}-socials">
+		{% if BSCFTRSCLS_WBST_ENBL %}
+		<li>
+			<a class="bscftrscls-social bscftrscls-website" href="{{ BSCFTRSCLS_WBST_URL }}" target="_blank" rel="noopener" title="{{ lang('BSCFTRSCLS_WBST') }}">
+				<i class="icon fa-globe fa-fw" aria-hidden="true"></i>
+			</a>
+		</li>
+		{% endif %}
+		{% if BSCFTRSCLS_FCBK_ENBL %}
+		<li>
+			<a class="bscftrscls-social bscftrscls-facebook" href="{{ BSCFTRSCLS_FCBK_URL }}" target="_blank" rel="noopener" title="{{ lang('BSCFTRSCLS_FCBK') }}">
+				<i class="icon fa-facebook fa-fw" aria-hidden="true"></i>
+			</a>
+		</li>
+		{% endif %}
+		{% if BSCFTRSCLS_TWTR_ENBL %}
+		<li>
+			<a class="bscftrscls-social bscftrscls-twitter" href="{{ BSCFTRSCLS_TWTR_URL }}" target="_blank" rel="noopener" title="{{ lang('BSCFTRSCLS_TWTR') }}">
+				<i class="icon fa-twitter fa-fw" aria-hidden="true"></i>
+			</a>
+		</li>
+		{% endif %}
+		{% if BSCFTRSCLS_INSTA_ENBL %}
+		<li>
+			<a class="bscftrscls-social bscftrscls-instagram" href="{{ BSCFTRSCLS_INSTA_URL }}" target="_blank" rel="noopener" title="{{ lang('BSCFTRSCLS_INSTA') }}">
+				<i class="icon fa-instagram fa-fw" aria-hidden="true"></i>
+			</a>
+		</li>
+		{% endif %}
+		{% if BSCFTRSCLS_PNTRST_ENBL %}
+		<li>
+			<a class="bscftrscls-social bscftrscls-pinterest" href="{{ BSCFTRSCLS_PNTRST_URL }}" target="_blank" rel="noopener" title="{{ lang('BSCFTRSCLS_PNTRST') }}">
+				<i class="icon fa-pinterest fa-fw" aria-hidden="true"></i>
+			</a>
+		</li>
+		{% endif %}
+		{% if BSCFTRSCLS_YTUBE_ENBL %}
+		<li>
+			<a class="bscftrscls-social bscftrscls-youtube" href="{{ BSCFTRSCLS_YTUBE_URL }}" target="_blank" rel="noopener" title="{{ lang('BSCFTRSCLS_YTUBE') }}">
+				<i class="icon fa-youtube fa-fw" aria-hidden="true"></i>
+			</a>
+		</li>
+		{% endif %}
+		{% if BSCFTRSCLS_DRBL_ENBL %}
+		<li>
+			<a class="bscftrscls-social bscftrscls-dribbble" href="{{ BSCFTRSCLS_DRBL_URL }}" target="_blank" rel="noopener" title="{{ lang('BSCFTRSCLS_DRBL') }}">
+				<i class="icon fa-dribbble fa-fw" aria-hidden="true"></i>
+			</a>
+		</li>
+		{% endif %}
+		{% if BSCFTRSCLS_CDPEN_ENBL %}
+		<li>
+			<a class="bscftrscls-social bscftrscls-codepen" href="{{ BSCFTRSCLS_CDPEN_URL }}" target="_blank" rel="noopener" title="{{ lang('BSCFTRSCLS_CDPEN') }}">
+				<i class="icon fa-codepen fa-fw" aria-hidden="true"></i>
+			</a>
+		</li>
+		{% endif %}
+		{% if BSCFTRSCLS_GTHUB_ENBL %}
+		<li>
+			<a class="bscftrscls-social bscftrscls-github" href="{{ BSCFTRSCLS_GTHUB_URL }}" target="_blank" rel="noopener" title="{{ lang('BSCFTRSCLS_GTHUB') }}">
+				<i class="icon fa-github fa-fw" aria-hidden="true"></i>
+			</a>
+		</li>
+		{% endif %}
+		{% if BSCFTRSCLS_EBAY_ENBL %}
+		<li>
+			<a class="bscftrscls-social bscftrscls-ebay" href="{{ BSCFTRSCLS_EBAY_URL }}" target="_blank" rel="noopener" title="{{ lang('BSCFTRSCLS_EBAY') }}">
+				<i class="icon fa-gavel fa-fw" aria-hidden="true"></i>
+			</a>
+		</li>
+		{% endif %}
+		{% if BSCFTRSCLS_PYPL_ENBL %}
+		<li>
+			<a class="bscftrscls-social bscftrscls-paypal" href="{{ BSCFTRSCLS_PYPL_URL }}" target="_blank" rel="noopener" title="{{ lang('BSCFTRSCLS_PYPL') }}">
+				<i class="icon fa-paypal fa-fw" aria-hidden="true"></i>
+			</a>
+		</li>
+		{% endif %}
+	</ul>
+	</div>
+</div>
