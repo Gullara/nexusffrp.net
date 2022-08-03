@@ -1532,55 +1532,99 @@ phpbb.registerDropdown = function(toggle, dropdown, options) {
 };
 
 /**
-* Get the HTML for a color palette table.
+* Get the HTML for a 5x5 color palette table body.
+*
+* @param {array} colourCodes 25 length array of hex codes.
+* @param {array} colourNames 25 length array of names.
+* @param {int} width Palette cell width.
+* @param {int} height Palette cell height.
+*/
+phpbb.colorPaletteBody = function(colourCodes, colourNames, width, height) {
+	var i,
+		hex = '',
+		name = '',
+		html = '';
+	
+	html += '<tbody>';
+	
+	for (i = 0; i < colourCodes.length; i++) {
+		if (i % 5 === 0) {
+			html += '<tr>';
+		}
+		
+		hex = colourCodes[i];
+		name = colourNames[i];
+		
+		html += '<td style="background-color: #' + hex + '; width: ' + width + 'px; height: ' +
+			height + 'px;"><a href="#" data-color="' + hex + '" style="display: block; width: ' +
+			width + 'px; height: ' + height + 'px; " alt="' + name + '" title="' + name + '"></a>';
+		html += '</td>';
+		
+		if (i % 5 === 4) {
+			html += '</tr>';
+		}
+	}
+	
+	html += '</tbody>';
+	
+	return html;
+};
+
+/**
+* Get the HTML for a color palette table. Modified to support a hard coded array of colours.
 *
 * @param {string} dir Palette direction - either v or h
 * @param {int} width Palette cell width.
 * @param {int} height Palette cell height.
 */
 phpbb.colorPalette = function(dir, width, height) {
-	var r, g, b,
-		numberList = new Array(6),
-		color = '',
+	var tableDeclare = '',
 		html = '';
-
-	numberList[0] = '00';
-	numberList[1] = '40';
-	numberList[2] = '80';
-	numberList[3] = 'BF';
-	numberList[4] = 'FF';
-
-	var tableClass = (dir === 'h') ? 'horizontal-palette' : 'vertical-palette';
-	html += '<table class="not-responsive colour-palette ' + tableClass + '" style="width: auto;">';
-
-	for (r = 0; r < 5; r++) {
-		if (dir === 'h') {
-			html += '<tr>';
-		}
-
-		for (g = 0; g < 5; g++) {
-			if (dir === 'v') {
-				html += '<tr>';
-			}
-
-			for (b = 0; b < 5; b++) {
-				color = '' + numberList[r] + numberList[g] + numberList[b];
-				html += '<td style="background-color: #' + color + '; width: ' + width + 'px; height: ' +
-					height + 'px;"><a href="#" data-color="' + color + '" style="display: block; width: ' +
-					width + 'px; height: ' + height + 'px; " alt="#' + color + '" title="#' + color + '"></a>';
-				html += '</td>';
-			}
-
-			if (dir === 'v') {
-				html += '</tr>';
-			}
-		}
-
-		if (dir === 'h') {
-			html += '</tr>';
-		}
+	
+	var colourCodes1 = [
+		'800000', 'FF4500', 'CD853F', '006400', '008080',
+		'8B0000', 'FF6347', 'B8860B', '008000', '20B2AA',
+		'B22222', 'FF7F50', 'DAA520', '808000', '40E0D0',
+		'DC143C', 'FF8C00', 'FFD700', '6B8E23', '66CDAA',
+		'FA8072', 'FFA500', 'BDB76B', '32CD32', '8FBC8B'
+	];
+	var colourNames1 = [
+		'Maroon', 'OrangeRed', 'Peru', 'DarkGreen', 'Teal',
+		'DarkRed', 'Tomato', 'DarkGoldenrod', 'Green', 'LightSeaGreen',
+		'FireBrick', 'Coral', 'Goldenrod', 'Olive', 'Turquoise',
+		'Crimson', 'DarkOrange', 'Gold', 'OliveDrab', 'MediumAquamarine',
+		'Salmon', 'Orange', 'DarkKhaki', 'LimeGreen', 'DarkSeaGreen'
+	];
+	
+	var colourCodes2 = [
+		'000080', '4B0082', 'C71585', '8B4513', '000000',
+		'0000CD', '800080', 'FF69B4', 'A0522D', '2F4F4F',
+		'0000FF', '9932CC', 'FF00FF', 'A52A2A', '808080',
+		'4169E1', 'BA55D3', 'EE82EE', 'D2691E', 'A9A9A9',
+		'00BFFF', '9370DB', 'DDA0DD', 'F4A460', 'FFFFFF'
+	];
+	var colourNames2 = [
+		'Navy', 'Indigo', 'MediumVioletRed', 'SaddleBrown', 'Black',
+		'MediumBlue', 'Purple', 'HotPink', 'Sienna', 'DarkSlateGray',
+		'Blue', 'DarkOrchid', 'Magenta', 'Brown', 'Gray',
+		'RoyalBlue', 'MediumOrchid', 'Violet', 'Chocolate', 'DimGray',
+		'DeepSkyBlue', 'MediumPurple', 'Plum', 'SandyBrown', 'White'
+	];
+	
+	if (dir === 'h') {
+		tableDeclare += '<table class="not-responsive colour-palette horizontal-palette" style="float: left; width: auto;">';
+	} else {
+		tableDeclare += '<table class="not-responsive colour-palette vertical-palette" style="width: auto;">';
 	}
+	
+	html += tableDeclare;
+	html += phpbb.colorPaletteBody(colourCodes1, colourNames1, width, height);
 	html += '</table>';
+	
+	html += tableDeclare;
+	html += phpbb.colorPaletteBody(colourCodes2, colourNames2, width, height);
+	html += '</table>';
+	
 	return html;
 };
 
