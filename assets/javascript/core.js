@@ -1557,7 +1557,7 @@ phpbb.colorPaletteBody = function(colourCodes, colourNames, width, height) {
 		
 		html += '<td style="background-color: #' + hex + '; width: ' + width + 'px; height: ' +
 			height + 'px;"><a href="#" data-color="' + hex + '" style="display: block; width: ' +
-			width + 'px; height: ' + height + 'px; " alt="#' + name + '" title="#' + name + '"></a>';
+			width + 'px; height: ' + height + 'px; " alt="' + name + '" title="' + name + '"></a>';
 		html += '</td>';
 		
 		if (i % 5 === 4) {
@@ -1585,15 +1585,15 @@ phpbb.colorPalette = function(dir, width, height) {
 		'800000', 'FF4500', 'CD853F', '006400', '008080',
 		'8B0000', 'FF6347', 'B8860B', '008000', '20B2AA',
 		'B22222', 'FF7F50', 'DAA520', '808000', '40E0D0',
-		'DC143C', 'FF8C00', 'FFD700', '6B8E23', '8FBC8B',
-		'FA8072', 'FFA500', 'BDB76B', '32CD32', '66CDAA'
+		'DC143C', 'FF8C00', 'FFD700', '6B8E23', '66CDAA',
+		'FA8072', 'FFA500', 'BDB76B', '32CD32', '8FBC8B'
 	];
 	var colourNames1 = [
 		'Maroon', 'OrangeRed', 'Peru', 'DarkGreen', 'Teal',
 		'DarkRed', 'Tomato', 'DarkGoldenrod', 'Green', 'LightSeaGreen',
 		'FireBrick', 'Coral', 'Goldenrod', 'Olive', 'Turquoise',
-		'Crimson', 'DarkOrange', 'Gold', 'OliveDrab', 'DarkSeaGreen',
-		'Salmon', 'Orange', 'DarkKhaki', 'LimeGreen', 'MediumAquamarine'
+		'Crimson', 'DarkOrange', 'Gold', 'OliveDrab', 'MediumAquamarine',
+		'Salmon', 'Orange', 'DarkKhaki', 'LimeGreen', 'DarkSeaGreen'
 	];
 	
 	var colourCodes2 = [
@@ -1612,7 +1612,7 @@ phpbb.colorPalette = function(dir, width, height) {
 	];
 	
 	if (dir === 'h') {
-		tableDeclare += '<table class="not-responsive colour-palette horizontal-palette" style="float: left; width: 50%;">';
+		tableDeclare += '<table class="not-responsive colour-palette horizontal-palette" style="float: left; width: auto;">';
 	} else {
 		tableDeclare += '<table class="not-responsive colour-palette vertical-palette" style="width: auto;">';
 	}
