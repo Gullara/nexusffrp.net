@@ -1614,7 +1614,7 @@ phpbb.colorPalette = function(dir, width, height) {
 	if (dir === 'h') {
 		tableDeclare += '<table class="not-responsive colour-palette horizontal-palette" style="float: left; width: 50%;">';
 	} else {
-		tableDeclare += '<table class="not-responsive colour-palette horizontal-palette" style="width: auto;">';
+		tableDeclare += '<table class="not-responsive colour-palette vertical-palette" style="width: auto;">';
 	}
 	
 	html += tableDeclare;
