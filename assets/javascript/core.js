@@ -1583,17 +1583,17 @@ phpbb.colorPalette = function(dir, width, height) {
 	
 	var colourCodes1 = [
 		'800000', 'FF4500', 'CD853F', '006400', '008080',
-		'8B0000', 'FF6347', 'B8860B', '008000', '20B2AA',
-		'B22222', 'FF7F50', 'DAA520', '808000', '40E0D0',
-		'DC143C', 'FF8C00', 'FFD700', '6B8E23', '66CDAA',
-		'FA8072', 'FFA500', 'BDB76B', '32CD32', '8FBC8B'
+		'8B0000', 'FF7F50', 'B8860B', '008000', '20B2AA',
+		'B22222', 'FF8C00', 'DAA520', '6B8E23', '40E0D0',
+		'FF0000', 'FFA500', 'FFD700', '32CD32', '66CDAA',
+		'FA8072', 'FFA07A', 'BDB76B', '3CB371', '8FBC8B'
 	];
 	var colourNames1 = [
 		'Maroon', 'OrangeRed', 'Peru', 'DarkGreen', 'Teal',
-		'DarkRed', 'Tomato', 'DarkGoldenrod', 'Green', 'LightSeaGreen',
-		'FireBrick', 'Coral', 'Goldenrod', 'Olive', 'Turquoise',
-		'Crimson', 'DarkOrange', 'Gold', 'OliveDrab', 'MediumAquamarine',
-		'Salmon', 'Orange', 'DarkKhaki', 'LimeGreen', 'DarkSeaGreen'
+		'DarkRed', 'Coral', 'DarkGoldenrod', 'Green', 'LightSeaGreen',
+		'FireBrick', 'DarkOrange', 'Goldenrod', 'OliveDrab', 'Turquoise',
+		'Red', 'Orange', 'Gold', 'LimeGreen', 'MediumAquamarine',
+		'Salmon', 'Lightsalmon', 'DarkKhaki', 'MediumSeaGreen', 'DarkSeaGreen'
 	];
 	
 	var colourCodes2 = [
