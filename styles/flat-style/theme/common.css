@@ -722,6 +722,10 @@ table.info tbody th {
 	max-width: 100%;
 }
 
+.topic-poster {
+	margin: 0px 4px 0px 0px;
+}
+
 .left-box.profile-details {
 	width: 80%;
 }
