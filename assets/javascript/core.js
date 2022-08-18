@@ -1582,18 +1582,18 @@ phpbb.colorPalette = function(dir, width, height) {
 		html = '';
 	
 	var colourCodes1 = [
-		'800000', 'FF4500', 'CD853F', '006400', '008080',
-		'8B0000', 'FF7F50', 'B8860B', '008000', '20B2AA',
-		'B22222', 'FF8C00', 'DAA520', '6B8E23', '40E0D0',
-		'FF0000', 'FFA500', 'FFD700', '32CD32', '66CDAA',
-		'FA8072', 'FFA07A', 'BDB76B', '3CB371', '8FBC8B'
+		'8B0000', 'FF4500', 'CD853F', '006400', '008080',
+		'B22222', 'FF7F50', 'B8860B', '008000', '20B2AA',
+		'DC143C', 'FF8C00', 'DAA520', '808000', '40E0D0',
+		'FF0000', 'FFA500', 'FFD700', '6B8E23', '3CB371',
+		'FA8072', 'FFA07A', 'BDB76B', '32CD32', '8FBC8B'
 	];
 	var colourNames1 = [
-		'Maroon', 'OrangeRed', 'Peru', 'DarkGreen', 'Teal',
-		'DarkRed', 'Coral', 'DarkGoldenrod', 'Green', 'LightSeaGreen',
-		'FireBrick', 'DarkOrange', 'Goldenrod', 'OliveDrab', 'Turquoise',
-		'Red', 'Orange', 'Gold', 'LimeGreen', 'MediumAquamarine',
-		'Salmon', 'Lightsalmon', 'DarkKhaki', 'MediumSeaGreen', 'DarkSeaGreen'
+		'DarkRed', 		'OrangeRed', 	'Peru', 			'DarkGreen', 	'Teal',
+		'FireBrick', 	'Coral', 		'DarkGoldenrod', 	'Green', 		'LightSeaGreen',
+		'Crimson', 		'DarkOrange', 	'Goldenrod', 		'Olive', 		'Turquoise',
+		'Red', 			'Orange', 		'Gold', 			'OliveDrab', 	'MediumSeaGreen',
+		'Salmon', 		'Lightsalmon', 	'DarkKhaki', 		'LimeGreen', 	'DarkSeaGreen'
 	];
 	
 	var colourCodes2 = [
@@ -1604,11 +1604,11 @@ phpbb.colorPalette = function(dir, width, height) {
 		'00BFFF', '9370DB', 'DDA0DD', 'F4A460', 'FFFFFF'
 	];
 	var colourNames2 = [
-		'Navy', 'Indigo', 'MediumVioletRed', 'SaddleBrown', 'Black',
-		'MediumBlue', 'Purple', 'HotPink', 'Sienna', 'DarkSlateGray',
-		'Blue', 'DarkOrchid', 'Magenta', 'Brown', 'Gray',
-		'RoyalBlue', 'MediumOrchid', 'Violet', 'Chocolate', 'DimGray',
-		'DeepSkyBlue', 'MediumPurple', 'Plum', 'SandyBrown', 'White'
+		'Navy', 		'Indigo', 		'MediumVioletRed', 	'SaddleBrown', 	'Black',
+		'MediumBlue', 	'Purple', 		'HotPink', 			'Sienna', 		'DarkSlateGray',
+		'Blue', 		'DarkOrchid', 	'Magenta', 			'Brown', 		'Gray',
+		'RoyalBlue', 	'MediumOrchid', 'Violet', 			'Chocolate', 	'DimGray',
+		'DeepSkyBlue', 	'MediumPurple', 'Plum', 			'SandyBrown', 	'White'
 	];
 	
 	if (dir === 'h') {

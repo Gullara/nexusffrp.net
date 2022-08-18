@@ -8,3 +8,4 @@ Externally sourced repos:
 * aurelienazerty/darkmode - https://www.phpbb.com/customise/db/extension/darkmode/
 * forumflair/bscftrscls - https://www.phpbb.com/customise/db/extension/bscftrscls
 * vse/abbc3 - https://www.phpbb.com/customise/db/extension/advanced_bbcode_box/
+* robertheim/topictags - https://gitlab.com/adynemo/topictags
